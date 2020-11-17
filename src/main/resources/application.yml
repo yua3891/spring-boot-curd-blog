@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.ken.mybatistest1.entity
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+logging:
+  level:
+    com.ken.mybatistest1.controller: debug

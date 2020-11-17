@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>增加博客</title>
+</head>
+<body>
+<h1>增加博客</h1>
+<a th:href="@{/blog/getAll}">返回博客列表</a>
+<form method="post" th:action="@{/blog/blogSuccess}">
+    <input type="hidden" name="id" th:value="${blog?.id}"  />
+    <table>
+        <tr>
+            <td>标题</td>
+            <td><input type="text" name="title" th:value="${blog?.title}" /></td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td><input type="text" name="content" th:value="${blog?.content}" /></td>
+        </tr>
+
+        <tr>
+            <td>添加时间</td>
+            <td><input type="text" name="time_add" th:value="${blog?.time_add}" /></td>
+        </tr>
+
+        <tr>
+            <td>显示时间</td>
+            <td><input type="text" name="time_show" th:value="${blog?.time_show}" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="提交" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

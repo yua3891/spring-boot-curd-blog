@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>博客列表</title>
+</head>
+<body>
+<h1>博客列表</h1>
+<a th:href="@{/blog/addBlog}">增加博客</a>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>标题</td>
+        <td>内容</td>
+        <td>添加时间</td>
+        <td>显示时间</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="blog:${list}">
+        <td th:text="${blog.id}"></td>
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.content}"></td>
+        <td th:text="${blog.time_show}"></td>
+        <td th:text="${blog.time_add}"></td>
+        <td>
+            <a th:href="@{/blog/addBlog(id=${blog.id})}">修改</a>
+            <a th:href="@{/blog/deleteBlog(id=${blog.id})}">删除</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
