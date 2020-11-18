@@ -13,4 +13,7 @@ mybatis:
 
 logging:
   level:
+    root: info
     com.ken.mybatistest1.controller: debug
+  file:
+    name: log/blog.log
