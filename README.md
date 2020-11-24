@@ -6,11 +6,14 @@ ken,一位老php程序员转行做java的学习之路。2020-11-17
 ---
 
 ## 版本记录
+### 2020-11-24,v0.0.3
+> 增加spring security，增加后台登录框，进行登录授权和验证角色权限
+
 ### 2020-11-20,v0.0.2 
 > 增加了logger和aspect来主动记录日志
 > 1、yml增加logger配置项
 > 2、增加插件aspect
-> 3、增加aspect.Log
+> 3、增加aspect.LogAspect.java 进行After、Before、Around等切面记录日志
 
 *** 
 
